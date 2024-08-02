@@ -15,10 +15,23 @@ footer {
   padding: 60px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 30px;
+  background: linear-gradient(
+    65.4deg,
+    rgb(56, 248, 249) -9.1%,
+    rgb(213, 141, 240) 48%,
+    rgb(249, 56, 152) 111.1%
+  );
 }
 body {
   background-color: #f9f7fe;
   font-family: Georgia, "Times New Roman", Times, serif;
+  background: linear-gradient(
+    57.4deg,
+    rgb(249, 206, 183) 4.6%,
+    rgb(234, 174, 202) 26%,
+    rgb(210, 182, 226) 49.1%,
+    rgb(173, 209, 242) 86.5%
+  );
 }
 select {
   display: block;
@@ -51,4 +64,7 @@ h2 {
 }
 .city:last-child {
   border: none;
+}
+strong {
+  color: purple;
 }
