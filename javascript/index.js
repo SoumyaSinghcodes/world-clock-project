@@ -22,8 +22,23 @@ setInterval(function () {
   SYTimeElement.innerHTML = SYTime.format("h:mm:ss  [<small>]A[</small>]");
 }, 1000);
 
+//MO
+
+setInterval(function () {
+  let MOElement = document.querySelector("#MO");
+  let MODateElement = MOElement.querySelector(".date");
+  let MOTimeElement = MOElement.querySelector(".time");
+  let MOTime = moment().tz("Europe/Moscow");
+
+  MODateElement.innerHTML = MOTime.format("MMMM Do YYYY");
+  MOTimeElement.innerHTML = MOTime.format("h:mm:ss  [<small>]A[</small>]");
+}, 1000);
+
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
   let cityName = cityTimeZone.replace("_", "").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
